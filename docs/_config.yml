@@ -1,4 +1,7 @@
 title: IED Temporal Organization
 description: Deidentified result data and reproducibility resources for Keldsen et al.
+url: https://elijah-keldsen.github.io
+baseurl: /ied-temporal-organization
+repository: elijah-keldsen/ied-temporal-organization
 theme: jekyll-theme-minimal
 show_downloads: true

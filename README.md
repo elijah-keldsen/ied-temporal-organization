@@ -8,6 +8,7 @@
 ![Data](https://img.shields.io/badge/data-deidentified-009E73)
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB)
 ![License](https://img.shields.io/badge/code-MIT-E69F00)
+[![Release audit](https://github.com/elijah-keldsen/ied-temporal-organization/actions/workflows/release-audit.yml/badge.svg)](https://github.com/elijah-keldsen/ied-temporal-organization/actions/workflows/release-audit.yml)
 
 </div>
 

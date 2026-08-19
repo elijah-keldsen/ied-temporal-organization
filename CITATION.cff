@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code or data, please cite the accompanying manuscript."
 title: "IED Temporal Organization: code and deidentified result data"
 version: 0.1.0
+repository-code: "https://github.com/elijah-keldsen/ied-temporal-organization"
 authors:
   - family-names: Keldsen
     given-names: Elijah W.

@@ -17,8 +17,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 1221,
-      "sha256": "126b36f67cac0dafc1007a78398489b5184653eb1e3ab43af2fd7c6493052daa"
+      "bytes": 1300,
+      "sha256": "3c231bda2f1d027e2a33eff4df024f3f022066c58781479c280f9f938cfecfc1"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -57,8 +57,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5045,
-      "sha256": "63349b81ef250e54c1bf36f8b1b11ff9352942db4b9be7fa5a65173613c16510"
+      "bytes": 5268,
+      "sha256": "15411a15abb5b49c04c6ff78ef73084c1cfcabd4c48aed99a806d1cb202ed958"
     },
     {
       "path": "REPRODUCIBILITY.md",
@@ -187,8 +187,8 @@
     },
     {
       "path": "docs/_config.yml",
-      "bytes": 169,
-      "sha256": "fd911a276f567ba977bd49a85820e92495eee413203f667962ad8c7541827c76"
+      "bytes": 296,
+      "sha256": "92dc4d3f880da840d36549173b2c321fbc373bc2cf897fe2c1cb52f5ae2d2bc2"
     },
     {
       "path": "docs/assets/figure2_dependency_structure.png",
