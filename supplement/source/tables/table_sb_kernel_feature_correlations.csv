@@ -1,0 +1,8 @@
+Characteristic,Age,Log modeled onset-response rate (post-first-onset hours),Early boundary,Peak lag,Peak multiplier,40–70 s multiplier,Split-half residual correlation
+Age,1,-0.378627,-0.145342,-0.070077,0.320993,0.123602,-0.277197
+Log modeled onset-response rate (post-first-onset hours),-0.378627,1,0.102638,-0.049726,-0.65974,-0.256832,0.29726
+Early boundary,-0.145342,0.102638,1,0.616682,-0.176186,0.112599,0.168184
+Peak lag,-0.070077,-0.049726,0.616682,1,-0.151262,0.040491,0.055735
+Peak multiplier,0.320993,-0.65974,-0.176186,-0.151262,1,0.202568,-0.367384
+40–70 s multiplier,0.123602,-0.256832,0.112599,0.040491,0.202568,1,0.159004
+Split-half residual correlation,-0.277197,0.29726,0.168184,0.055735,-0.367384,0.159004,1

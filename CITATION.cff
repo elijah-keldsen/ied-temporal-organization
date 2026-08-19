@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the accompanying manuscript."
+title: "IED Temporal Organization: code and deidentified result data"
+version: 0.1.0
+authors:
+  - family-names: Keldsen
+    given-names: Elijah W.
+  - family-names: Sun
+    given-names: Haoqi
+  - family-names: Sun
+    given-names: Chenxi
+  - family-names: Grimberg
+    given-names: Lynn A. N.
+  - family-names: Ng
+    given-names: Marcus
+  - family-names: Goldenholz
+    given-names: Daniel M.
+  - family-names: Jing
+    given-names: Jin
+  - family-names: Westover
+    given-names: M. Brandon
+license: MIT
+preferred-citation:
+  type: article
+  title: "Patient-specific temporal dynamics organize interictal epileptiform activity in human epilepsy"
+  journal: Brain
+  year: 2026
+  authors:
+    - family-names: Keldsen
+      given-names: Elijah W.
+    - family-names: Sun
+      given-names: Haoqi
+    - family-names: Sun
+      given-names: Chenxi
+    - family-names: Grimberg
+      given-names: Lynn A. N.
+    - family-names: Ng
+      given-names: Marcus
+    - family-names: Goldenholz
+      given-names: Daniel M.
+    - family-names: Jing
+      given-names: Jin
+    - family-names: Westover
+      given-names: M. Brandon

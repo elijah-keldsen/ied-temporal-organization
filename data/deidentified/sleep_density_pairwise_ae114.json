@@ -1,0 +1,135 @@
+{
+ "design": "pairwise IED-density ratios, second/first in state order wake<n1<n2<n3<rem; inclusion >=1800 s and >0 spikes in both states; geomean ratio + patient-bootstrap 95% CI (5000 draws); Wilcoxon signed-rank of log ratios vs 0; BH over 10 contrasts",
+ "pairs": {
+  "wake_vs_n1": {
+   "ratio_is": "n1/wake",
+   "n": 112,
+   "geomean_ratio": 1.939977415290841,
+   "geomean_ci95": [
+    1.637941867161528,
+    2.3045257522708242
+   ],
+   "median_ratio": 1.728698273712331,
+   "n_ratio_gt_1": 90,
+   "wilcoxon_p": 2.852937163463489e-11,
+   "wilcoxon_q_BH10": 7.132342908658723e-11
+  },
+  "wake_vs_n2": {
+   "ratio_is": "n2/wake",
+   "n": 114,
+   "geomean_ratio": 3.7966386535756276,
+   "geomean_ci95": [
+    3.2525536469309153,
+    4.454045916788073
+   ],
+   "median_ratio": 3.4304318498329676,
+   "n_ratio_gt_1": 110,
+   "wilcoxon_p": 1.4417963599078095e-19,
+   "wilcoxon_q_BH10": 1.4417963599078095e-18
+  },
+  "wake_vs_n3": {
+   "ratio_is": "n3/wake",
+   "n": 112,
+   "geomean_ratio": 3.6850164964261727,
+   "geomean_ci95": [
+    3.0688589966054307,
+    4.463551794061575
+   ],
+   "median_ratio": 3.6821182962579635,
+   "n_ratio_gt_1": 101,
+   "wilcoxon_p": 1.4347623964707275e-17,
+   "wilcoxon_q_BH10": 7.173811982353638e-17
+  },
+  "wake_vs_rem": {
+   "ratio_is": "rem/wake",
+   "n": 84,
+   "geomean_ratio": 1.4974038396352465,
+   "geomean_ci95": [
+    1.2300125062847023,
+    1.8184202295314391
+   ],
+   "median_ratio": 1.5960009552359735,
+   "n_ratio_gt_1": 57,
+   "wilcoxon_p": 0.00026881145183125366,
+   "wilcoxon_q_BH10": 0.0003360143147890671
+  },
+  "n1_vs_n2": {
+   "ratio_is": "n2/n1",
+   "n": 112,
+   "geomean_ratio": 1.9523262352476716,
+   "geomean_ci95": [
+    1.6963777990216398,
+    2.243928472079571
+   ],
+   "median_ratio": 1.738027186054661,
+   "n_ratio_gt_1": 99,
+   "wilcoxon_p": 4.8889853181055914e-15,
+   "wilcoxon_q_BH10": 1.6296617727018638e-14
+  },
+  "n1_vs_n3": {
+   "ratio_is": "n3/n1",
+   "n": 110,
+   "geomean_ratio": 1.885023539441316,
+   "geomean_ci95": [
+    1.5532046216749,
+    2.294733652490001
+   ],
+   "median_ratio": 1.6097309580087633,
+   "n_ratio_gt_1": 82,
+   "wilcoxon_p": 3.6243469063708595e-09,
+   "wilcoxon_q_BH10": 6.0405781772847656e-09
+  },
+  "n1_vs_rem": {
+   "ratio_is": "rem/n1",
+   "n": 83,
+   "geomean_ratio": 0.8227952154987787,
+   "geomean_ci95": [
+    0.6742636475967246,
+    1.0096253729839078
+   ],
+   "median_ratio": 0.8791796008869179,
+   "n_ratio_gt_1": 36,
+   "wilcoxon_p": 0.04624842441636437,
+   "wilcoxon_q_BH10": 0.051387138240404855
+  },
+  "n2_vs_n3": {
+   "ratio_is": "n3/n2",
+   "n": 112,
+   "geomean_ratio": 0.9616639064828475,
+   "geomean_ci95": [
+    0.873517521856491,
+    1.0645680232481665
+   ],
+   "median_ratio": 0.9510072162655642,
+   "n_ratio_gt_1": 52,
+   "wilcoxon_p": 0.375911858607624,
+   "wilcoxon_q_BH10": 0.375911858607624
+  },
+  "n2_vs_rem": {
+   "ratio_is": "rem/n2",
+   "n": 84,
+   "geomean_ratio": 0.4173628531753918,
+   "geomean_ci95": [
+    0.33959192051742587,
+    0.5098991078683313
+   ],
+   "median_ratio": 0.4578047457351137,
+   "n_ratio_gt_1": 12,
+   "wilcoxon_p": 3.633300651354185e-11,
+   "wilcoxon_q_BH10": 7.26660130270837e-11
+  },
+  "n3_vs_rem": {
+   "ratio_is": "rem/n3",
+   "n": 83,
+   "geomean_ratio": 0.4282609223329842,
+   "geomean_ci95": [
+    0.33939805456385097,
+    0.546998340134368
+   ],
+   "median_ratio": 0.4847302306425042,
+   "n_ratio_gt_1": 15,
+   "wilcoxon_p": 5.868865295405388e-09,
+   "wilcoxon_q_BH10": 8.384093279150554e-09
+  }
+ }
+}

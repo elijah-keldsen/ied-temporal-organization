@@ -1,0 +1,109 @@
+{
+  "age_band_aggregate": {
+    "0-18 y": {
+      "median": 0.9811408007587641,
+      "n_participants": 41
+    },
+    "18-35 y": {
+      "median": 0.9774833403099249,
+      "n_participants": 44
+    },
+    "35+ y": {
+      "median": 0.9657466174661647,
+      "n_participants": 29
+    }
+  },
+  "age_band_tests": [
+    {
+      "a": "0-18 y",
+      "b": "18-35 y",
+      "p": 0.23913702870254938
+    },
+    {
+      "a": "0-18 y",
+      "b": "35+ y",
+      "p": 0.040192209157036564
+    },
+    {
+      "a": "18-35 y",
+      "b": "35+ y",
+      "p": 0.6490981801292869
+    }
+  ],
+  "filters": {
+    "baseline_return": "|m(90 s) - 1| <= 0.25, both stays",
+    "max_ci_width": 0.6,
+    "min_stay_events": 500
+  },
+  "metric": "Pearson r between log history curves, 1-90 s grid",
+  "roc_summary": {
+    "auroc": 0.8815741807554128,
+    "auroc_cross_admission": 0.7033461365445172,
+    "ci95": [
+      0.8368258136608405,
+      0.9178233412478565
+    ],
+    "d_prime": 1.7163719855169806,
+    "design": "ROC, residual-correlation score",
+    "n_neg": 6441,
+    "n_neg_cross": 741,
+    "n_pos": 114,
+    "n_pos_cross": 39,
+    "negative": "first halves of two different participants",
+    "positive": "two alternating-clock-hour halves of one recording"
+  },
+  "selected": [
+    {
+      "fraction_not_significantly_different": 0.8715083798882681,
+      "lin_concordance": 0.9963108755871672,
+      "maximum_rate_ratio_difference": 1.570414849517548,
+      "morphology_score": 0.07222222222222222,
+      "normalized_rms_difference": 0.10338178837439199,
+      "panel": "A",
+      "participant_id": "P139",
+      "peak_ratio": 1.1571484137499044,
+      "rate_ratio": 1.0604610862699693,
+      "raw_correlation": 0.9912509011947369,
+      "residual_correlation": 0.9549814079162884
+    },
+    {
+      "fraction_not_significantly_different": 0.6927374301675978,
+      "lin_concordance": 0.9777895563587367,
+      "maximum_rate_ratio_difference": 1.5523476228592412,
+      "morphology_score": 0.1972222222222222,
+      "normalized_rms_difference": 0.19949138659126125,
+      "panel": "B",
+      "participant_id": "P041",
+      "peak_ratio": 1.1083725891850953,
+      "rate_ratio": 1.0700632724573171,
+      "raw_correlation": 0.985005027443994,
+      "residual_correlation": 0.8934100950388437
+    },
+    {
+      "fraction_not_significantly_different": 0.7150837988826816,
+      "lin_concordance": 0.9823184746798415,
+      "maximum_rate_ratio_difference": 3.121811862240953,
+      "morphology_score": 0.2916666666666667,
+      "normalized_rms_difference": 0.17345437805419553,
+      "panel": "C",
+      "participant_id": "P164",
+      "peak_ratio": 1.2064812040670758,
+      "rate_ratio": 1.0809688936500015,
+      "raw_correlation": 0.9776890277957396,
+      "residual_correlation": 0.8652899757963306
+    },
+    {
+      "fraction_not_significantly_different": 0.6815642458100558,
+      "lin_concordance": 0.9914184140277962,
+      "maximum_rate_ratio_difference": 1.799405738781769,
+      "morphology_score": 0.3333333333333333,
+      "normalized_rms_difference": 0.14846571415197843,
+      "panel": "D",
+      "participant_id": "P037",
+      "peak_ratio": 1.2599774382826263,
+      "rate_ratio": 1.266207820461797,
+      "raw_correlation": 0.9902160011300971,
+      "residual_correlation": 0.9209011494922217
+    }
+  ]
+}

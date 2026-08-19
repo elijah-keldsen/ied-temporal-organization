@@ -1,0 +1,5 @@
+Characteristic,Log IED-positive-second rate,History coordinate,Vigilance coordinate,ASM coordinate
+Log IED-positive-second rate,0,0.73963262,0.1514156,0.90874246
+History coordinate,0.73963262,0,4.0103378e-05,0.99930241
+Vigilance coordinate,0.1514156,4.0103378e-05,0,0.38050452
+ASM coordinate,0.90874246,0.99930241,0.38050452,0

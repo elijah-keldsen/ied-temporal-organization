@@ -1,0 +1,67 @@
+[
+  {
+    "artifact": "figures/manuscript/figure1_point_process.png",
+    "release_sha256": "5b17d83df5ec57516755bf07ccc9027195fc2ecd73c1f44053d88fc63115085f",
+    "source_sha256": "5b17d83df5ec57516755bf07ccc9027195fc2ecd73c1f44053d88fc63115085f"
+  },
+  {
+    "artifact": "figures/manuscript/figure2_dependency_structure.png",
+    "release_sha256": "6421f59527e7e7953075beb26dfc40b34fd6e39e75aca915978cf4bbd7a32bd4",
+    "source_sha256": "6421f59527e7e7953075beb26dfc40b34fd6e39e75aca915978cf4bbd7a32bd4"
+  },
+  {
+    "artifact": "figures/manuscript/figure3_rate_matched_histories.png",
+    "release_sha256": "51188c177ac36de55ba4bc4709f294f8a46184622974012006d3cd1ed1edb177",
+    "source_sha256": "51188c177ac36de55ba4bc4709f294f8a46184622974012006d3cd1ed1edb177"
+  },
+  {
+    "artifact": "figures/manuscript/figure4_reproducibility.png",
+    "release_sha256": "772db6337c793c0b3c7570f161030e9b702cb9d16bd9caa7fe89b4353b8b93fe",
+    "source_sha256": "772db6337c793c0b3c7570f161030e9b702cb9d16bd9caa7fe89b4353b8b93fe"
+  },
+  {
+    "artifact": "figures/manuscript/figure5_state_dependent_examples.png",
+    "release_sha256": "269d475b92e4511b6304d655c1f1a9228c10f5d37db1e76c8762631696ab23fb",
+    "source_sha256": "269d475b92e4511b6304d655c1f1a9228c10f5d37db1e76c8762631696ab23fb"
+  },
+  {
+    "artifact": "figures/manuscript/figure6_sleep_density.png",
+    "release_sha256": "806139a2c56040223b072689bdf7526a1cc654193ca3998c4e8702a10cf22ea1",
+    "source_sha256": "806139a2c56040223b072689bdf7526a1cc654193ca3998c4e8702a10cf22ea1"
+  },
+  {
+    "artifact": "supplement/supplementary_appendix.pdf",
+    "release_sha256": "8302a3ef32e32eaed7acd0445429e187f0283ec63cd884250ee3516cf946274a",
+    "source_sha256": "8302a3ef32e32eaed7acd0445429e187f0283ec63cd884250ee3516cf946274a"
+  },
+  {
+    "artifact": "supplement/source/supplementary_appendix.tex",
+    "release_sha256": "d271d9729987a3ce2c8bfc521982530f27a4aba0cb3a305e3c12ea23da9c690f",
+    "source_sha256": "339c4004a2fc190b3a47c48e66a9d5ae242aa759726faada02d79abe140a7c9b"
+  },
+  {
+    "artifact": "supplement/source/make_aligned_kernel_feature_figure.py",
+    "release_sha256": "28e378e787239b16800e295a24d0c0fc3e612f56920f2fe4aba04fbc815e3d40",
+    "source_sha256": "0d06e2890a1715aa18d2facb139a1e055368eebeb7457cd32faf9b9d7b702d3b"
+  },
+  {
+    "artifact": "supplement/figures/figure_s1_sleep_contrasts.png",
+    "release_sha256": "665c044c87166bc278606d3b4ddd327badf904de0cef878cace30bd1d1c4884c",
+    "source_sha256": "665c044c87166bc278606d3b4ddd327badf904de0cef878cace30bd1d1c4884c"
+  },
+  {
+    "artifact": "supplement/figures/figure_s2_history_perturbation.png",
+    "release_sha256": "af0c12ac22eaac618cc45780893212395b2bb8c8bfd4335a7b4fabb1a28956ea",
+    "source_sha256": "af0c12ac22eaac618cc45780893212395b2bb8c8bfd4335a7b4fabb1a28956ea"
+  },
+  {
+    "artifact": "supplement/figures/figure_s3_kernel_correlations.png",
+    "release_sha256": "df0fbe67b210440148dde25ec56c9869ceda677611f9adadcf9b3aeef0b23a92",
+    "source_sha256": "df0fbe67b210440148dde25ec56c9869ceda677611f9adadcf9b3aeef0b23a92"
+  },
+  {
+    "artifact": "supplement/figures/figure_s4_demographic_history.png",
+    "release_sha256": "5ff72a10eb6226a6fb38e069fdc40f94aeb16a6cc0bc8cc49c93fa580b7661d0",
+    "source_sha256": "5ff72a10eb6226a6fb38e069fdc40f94aeb16a6cc0bc8cc49c93fa580b7661d0"
+  }
+]

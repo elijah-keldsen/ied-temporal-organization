@@ -1,0 +1,80 @@
+[
+  {
+    "apparent_refractory_interval_s": 2.54,
+    "display_label": "Participant 1",
+    "excitatory_interval_s": 82.75000000000001,
+    "median_log_ci_width": 0.2278830118526585,
+    "modeled_hours": 113.8,
+    "modeled_onset_rate_per_min": 0.6177504393673111,
+    "n_onset_events": 4218,
+    "participant_id": "P171",
+    "peak_lag_s": 3.6199999999999997,
+    "peak_multiplier": 2.3263566322559206,
+    "split_half_r": 0.9919807376196431
+  },
+  {
+    "apparent_refractory_interval_s": 2.4699999999999998,
+    "display_label": "Participant 2",
+    "excitatory_interval_s": 59.36,
+    "median_log_ci_width": 0.2973451850512435,
+    "modeled_hours": 68.7,
+    "modeled_onset_rate_per_min": 0.6676370693837943,
+    "n_onset_events": 2752,
+    "participant_id": "P048",
+    "peak_lag_s": 3.69,
+    "peak_multiplier": 2.7742739018670557,
+    "split_half_r": 0.9921583334721362
+  },
+  {
+    "apparent_refractory_interval_s": 2.53,
+    "display_label": "Participant 3",
+    "excitatory_interval_s": 39.61,
+    "median_log_ci_width": 0.3196100649449584,
+    "modeled_hours": 47.7,
+    "modeled_onset_rate_per_min": 0.7285115303983228,
+    "n_onset_events": 2085,
+    "participant_id": "P141",
+    "peak_lag_s": 4.66,
+    "peak_multiplier": 2.424581700179546,
+    "split_half_r": 0.9295188603480881
+  },
+  {
+    "apparent_refractory_interval_s": 2.3899999999999997,
+    "display_label": "Participant 4",
+    "excitatory_interval_s": 85.94000000000001,
+    "median_log_ci_width": 0.28504353088015033,
+    "modeled_hours": 66.3,
+    "modeled_onset_rate_per_min": 0.7755153343388638,
+    "n_onset_events": 3085,
+    "participant_id": "P039",
+    "peak_lag_s": 3.4499999999999997,
+    "peak_multiplier": 3.9162862714281133,
+    "split_half_r": 0.9863766605299998
+  },
+  {
+    "apparent_refractory_interval_s": 2.46,
+    "display_label": "Participant 5",
+    "excitatory_interval_s": 51.61,
+    "median_log_ci_width": 0.26813851503517594,
+    "modeled_hours": 66.9,
+    "modeled_onset_rate_per_min": 0.7972097658196312,
+    "n_onset_events": 3200,
+    "participant_id": "P010",
+    "peak_lag_s": 3.4499999999999997,
+    "peak_multiplier": 3.1426197456634575,
+    "split_half_r": 0.9924287147450422
+  },
+  {
+    "apparent_refractory_interval_s": 2.59,
+    "display_label": "Participant 6",
+    "excitatory_interval_s": 67.36,
+    "median_log_ci_width": 0.2602189545937557,
+    "modeled_hours": 63.6,
+    "modeled_onset_rate_per_min": 0.8162997903563941,
+    "n_onset_events": 3115,
+    "participant_id": "P140",
+    "peak_lag_s": 11.86,
+    "peak_multiplier": 2.0992858671686454,
+    "split_half_r": 0.9875698646435319
+  }
+]

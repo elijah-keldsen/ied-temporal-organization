@@ -1,0 +1,469 @@
+{
+  "cohort_verdict": {
+    "auroc_B": {
+      "conc_median": 0.5302561306683498,
+      "delta_iqr": [
+        -0.08108157750009849,
+        0.03819976010919279
+      ],
+      "delta_median": -0.04810527399108511,
+      "n": 46,
+      "n_part_better": 16,
+      "part_median": 0.4857658481254309,
+      "wilcoxon_p": 0.028741241220473057
+    },
+    "auroc_BH": {
+      "conc_median": 0.7394431817984415,
+      "delta_iqr": [
+        -0.0005031658780275949,
+        0.038149723135064456
+      ],
+      "delta_median": 0.0104206688962451,
+      "n": 46,
+      "n_part_better": 34,
+      "part_median": 0.7752525531278702,
+      "wilcoxon_p": 0.0016087430676066106
+    },
+    "auroc_F": {
+      "conc_median": 0.7597108026273857,
+      "delta_iqr": [
+        -0.009803264114240817,
+        0.032869231891313744
+      ],
+      "delta_median": 0.003931274654768169,
+      "n": 46,
+      "n_part_better": 30,
+      "part_median": 0.7841120339603472,
+      "wilcoxon_p": 0.11123594842538864
+    },
+    "clipfrac": {
+      "conc_median": 0.0614173253531345,
+      "delta_iqr": [
+        0.033682787709744186,
+        0.23310442106916537
+      ],
+      "delta_median": 0.11350999747524008,
+      "n": 46,
+      "n_part_better": 8,
+      "part_median": 0.1996595483255029,
+      "wilcoxon_p": 5.556984206123161e-09
+    },
+    "den_po": {
+      "conc_median": 0.2925372105784999,
+      "delta_iqr": [
+        -0.4192366184034491,
+        0.02130458767940103
+      ],
+      "delta_median": -0.026327514929428978,
+      "n": 46,
+      "n_part_better": 16,
+      "part_median": 0.2289986812112328,
+      "wilcoxon_p": 0.00427738696311053
+    },
+    "lt2_qualifying_patients": 4,
+    "n_patients": 46,
+    "sa_A_po": {
+      "conc_median": 0.0011792594401480961,
+      "delta_iqr": [
+        -0.06644605537446055,
+        0.03289837481143355
+      ],
+      "delta_median": -0.0011891972268920116,
+      "n": 46,
+      "n_part_better": 19,
+      "part_median": 3.0219990374985292e-05,
+      "wilcoxon_p": 0.633795465148637
+    },
+    "sa_H_po": {
+      "conc_median": 0.26721223845495173,
+      "delta_iqr": [
+        -0.37608558983643003,
+        0.02255765017846211
+      ],
+      "delta_median": -0.025137976432691316,
+      "n": 46,
+      "n_part_better": 16,
+      "part_median": 0.22564870055457864,
+      "wilcoxon_p": 0.01102146668495152
+    },
+    "sa_V_po": {
+      "conc_median": 0.011084046035701161,
+      "delta_iqr": [
+        -0.058020679505227775,
+        0.0007160453978656654
+      ],
+      "delta_median": -0.0021160418740509895,
+      "n": 46,
+      "n_part_better": 15,
+      "part_median": 0.01193405799325809,
+      "wilcoxon_p": 0.012163111793029202
+    },
+    "skipped_stay_rows": 11,
+    "un_A_po": {
+      "conc_median": -0.00017958796189052563,
+      "delta_iqr": [
+        -0.0057645605598677496,
+        0.006707216242192229
+      ],
+      "delta_median": -0.0003893662813275726,
+      "n": 46,
+      "n_part_better": 18,
+      "part_median": -0.00016511173019601795,
+      "wilcoxon_p": 0.4350899118340976
+    },
+    "un_H_po": {
+      "conc_median": 0.15997207341887884,
+      "delta_iqr": [
+        -0.3231437850045086,
+        0.02509763055138971
+      ],
+      "delta_median": -0.014339519112420922,
+      "n": 46,
+      "n_part_better": 18,
+      "part_median": 0.18145055643552563,
+      "wilcoxon_p": 0.022053987379479167
+    },
+    "un_V_po": {
+      "conc_median": 0.003924126414434142,
+      "delta_iqr": [
+        -0.014287695161839784,
+        0.0006456613785187652
+      ],
+      "delta_median": -0.0009291453156406156,
+      "n": 46,
+      "n_part_better": 15,
+      "part_median": 0.002317582089943869,
+      "wilcoxon_p": 0.007083066464019794
+    }
+  },
+  "long3_best_stay": {
+    "P113": {
+      "auroc_F_rank_of_selected": 2,
+      "per_stay_table": [
+        {
+          "auroc_B": 0.4769,
+          "auroc_F": 0.69,
+          "clipfrac_max": 0.0003,
+          "den_po": 0.4302,
+          "n_events": 13233.0,
+          "n_obs": 44307.0,
+          "sa_H_po": 0.4231,
+          "stay_id": 2
+        },
+        {
+          "auroc_B": 0.4513,
+          "auroc_F": 0.7737,
+          "clipfrac_max": 0.0588,
+          "den_po": 0.3776,
+          "n_events": 32138.0,
+          "n_obs": 75760.0,
+          "sa_H_po": 0.3729,
+          "stay_id": 0
+        },
+        {
+          "auroc_B": 0.4958,
+          "auroc_F": 0.6101,
+          "clipfrac_max": 0.0041,
+          "den_po": 0.0384,
+          "n_events": 5160.0,
+          "n_obs": 28318.0,
+          "sa_H_po": 0.0385,
+          "stay_id": 1
+        },
+        {
+          "auroc_B": 0.5177,
+          "auroc_F": 0.6409,
+          "clipfrac_max": 0.0205,
+          "den_po": 0.0198,
+          "n_events": 1128.0,
+          "n_obs": 11621.0,
+          "sa_H_po": 0.0199,
+          "stay_id": 3
+        },
+        {
+          "auroc_B": 0.4717,
+          "auroc_F": 0.5907,
+          "clipfrac_max": 0.4807,
+          "den_po": 0.019,
+          "n_events": 1730.0,
+          "n_obs": 14944.0,
+          "sa_H_po": 0.0191,
+          "stay_id": 4
+        }
+      ],
+      "selected": {
+        "auroc_B": 0.4769,
+        "auroc_F": 0.69,
+        "clipfrac_max": 0.0003,
+        "den_po": 0.4302,
+        "n_events": 13233.0,
+        "n_obs": 44307.0,
+        "sa_H_po": 0.4231
+      },
+      "selected_stay": 2,
+      "selection_metric": "held-out per-obs D_B - D_F (primary); AUROC_F secondary"
+    },
+    "P139": {
+      "auroc_F_rank_of_selected": 7,
+      "per_stay_table": [
+        {
+          "auroc_B": 0.6058,
+          "auroc_F": 0.7913,
+          "clipfrac_max": 0.165,
+          "den_po": 0.6164,
+          "n_events": 19281.0,
+          "n_obs": 24036.0,
+          "sa_H_po": 0.6161,
+          "stay_id": 3
+        },
+        {
+          "auroc_B": 0.6233,
+          "auroc_F": 0.8442,
+          "clipfrac_max": 0.0893,
+          "den_po": 0.6157,
+          "n_events": 56881.0,
+          "n_obs": 79925.0,
+          "sa_H_po": 0.3897,
+          "stay_id": 4
+        },
+        {
+          "auroc_B": 0.5999,
+          "auroc_F": 0.7426,
+          "clipfrac_max": 0.1242,
+          "den_po": 0.4912,
+          "n_events": 15001.0,
+          "n_obs": 15303.0,
+          "sa_H_po": 0.4635,
+          "stay_id": 6
+        },
+        {
+          "auroc_B": 0.5586,
+          "auroc_F": 0.7878,
+          "clipfrac_max": 0.1386,
+          "den_po": 0.4405,
+          "n_events": 16645.0,
+          "n_obs": 16593.0,
+          "sa_H_po": 0.4349,
+          "stay_id": 5
+        },
+        {
+          "auroc_B": 0.5326,
+          "auroc_F": 0.7497,
+          "clipfrac_max": 0.0078,
+          "den_po": 0.4091,
+          "n_events": 62364.0,
+          "n_obs": 37853.0,
+          "sa_H_po": 0.3959,
+          "stay_id": 7
+        },
+        {
+          "auroc_B": 0.5612,
+          "auroc_F": 0.8094,
+          "clipfrac_max": 0.1034,
+          "den_po": 0.3876,
+          "n_events": 226680.0,
+          "n_obs": 105241.0,
+          "sa_H_po": 0.5871,
+          "stay_id": 9
+        },
+        {
+          "auroc_B": 0.4913,
+          "auroc_F": 0.8065,
+          "clipfrac_max": 0.3627,
+          "den_po": 0.37,
+          "n_events": 47434.0,
+          "n_obs": 15040.0,
+          "sa_H_po": 0.3642,
+          "stay_id": 11
+        },
+        {
+          "auroc_B": 0.731,
+          "auroc_F": 0.8163,
+          "clipfrac_max": 0.1084,
+          "den_po": 0.2512,
+          "n_events": 30779.0,
+          "n_obs": 24994.0,
+          "sa_H_po": 0.244,
+          "stay_id": 2
+        },
+        {
+          "auroc_B": 0.8067,
+          "auroc_F": 0.8548,
+          "clipfrac_max": 0.4366,
+          "den_po": 0.1434,
+          "n_events": 11521.0,
+          "n_obs": 14856.0,
+          "sa_H_po": 0.1445,
+          "stay_id": 0
+        },
+        {
+          "auroc_B": 0.5633,
+          "auroc_F": 0.6707,
+          "clipfrac_max": 0.0952,
+          "den_po": 0.1198,
+          "n_events": 29416.0,
+          "n_obs": 29964.0,
+          "sa_H_po": 0.1125,
+          "stay_id": 10
+        },
+        {
+          "auroc_B": 0.7289,
+          "auroc_F": 0.7741,
+          "clipfrac_max": 0.2959,
+          "den_po": 0.0479,
+          "n_events": 8535.0,
+          "n_obs": 26513.0,
+          "sa_H_po": 0.0478,
+          "stay_id": 1
+        },
+        {
+          "auroc_B": 0.5199,
+          "auroc_F": 0.829,
+          "clipfrac_max": 0.1718,
+          "den_po": -1.3451,
+          "n_events": 550.0,
+          "n_obs": 12072.0,
+          "sa_H_po": -1.3705,
+          "stay_id": 8
+        }
+      ],
+      "selected": {
+        "auroc_B": 0.6058,
+        "auroc_F": 0.7913,
+        "clipfrac_max": 0.165,
+        "den_po": 0.6164,
+        "n_events": 19281.0,
+        "n_obs": 24036.0,
+        "sa_H_po": 0.6161
+      },
+      "selected_stay": 3,
+      "selection_metric": "held-out per-obs D_B - D_F (primary); AUROC_F secondary"
+    },
+    "P161": {
+      "auroc_F_rank_of_selected": 2,
+      "per_stay_table": [
+        {
+          "auroc_B": 0.567,
+          "auroc_F": 0.7787,
+          "clipfrac_max": 0.0727,
+          "den_po": 0.1098,
+          "n_events": 6364.0,
+          "n_obs": 34042.0,
+          "sa_H_po": 0.0918,
+          "stay_id": 3
+        },
+        {
+          "auroc_B": 0.5401,
+          "auroc_F": 0.7376,
+          "clipfrac_max": 0.0847,
+          "den_po": 0.0873,
+          "n_events": 2063.0,
+          "n_obs": 15700.0,
+          "sa_H_po": 0.0862,
+          "stay_id": 10
+        },
+        {
+          "auroc_B": 0.7309,
+          "auroc_F": 0.778,
+          "clipfrac_max": 0.0018,
+          "den_po": 0.0783,
+          "n_events": 4062.0,
+          "n_obs": 22199.0,
+          "sa_H_po": 0.0826,
+          "stay_id": 4
+        },
+        {
+          "auroc_B": 0.4523,
+          "auroc_F": 0.7138,
+          "clipfrac_max": 0.0837,
+          "den_po": 0.0574,
+          "n_events": 426.0,
+          "n_obs": 10289.0,
+          "sa_H_po": 0.057,
+          "stay_id": 7
+        },
+        {
+          "auroc_B": 0.2842,
+          "auroc_F": 0.7596,
+          "clipfrac_max": 0.0411,
+          "den_po": 0.034,
+          "n_events": 369.0,
+          "n_obs": 13970.0,
+          "sa_H_po": 0.0339,
+          "stay_id": 8
+        },
+        {
+          "auroc_B": 0.3535,
+          "auroc_F": 0.7817,
+          "clipfrac_max": 0.0049,
+          "den_po": 0.0309,
+          "n_events": 318.0,
+          "n_obs": 14732.0,
+          "sa_H_po": 0.0309,
+          "stay_id": 6
+        },
+        {
+          "auroc_B": 0.3814,
+          "auroc_F": 0.6543,
+          "clipfrac_max": 0.1696,
+          "den_po": 0.0141,
+          "n_events": 571.0,
+          "n_obs": 15839.0,
+          "sa_H_po": 0.014,
+          "stay_id": 5
+        },
+        {
+          "auroc_B": 0.3838,
+          "auroc_F": 0.6618,
+          "clipfrac_max": 0.1235,
+          "den_po": 0.0092,
+          "n_events": 423.0,
+          "n_obs": 20921.0,
+          "sa_H_po": 0.0091,
+          "stay_id": 2
+        },
+        {
+          "auroc_B": 0.4732,
+          "auroc_F": 0.6268,
+          "clipfrac_max": 0.137,
+          "den_po": 0.0043,
+          "n_events": 367.0,
+          "n_obs": 16866.0,
+          "sa_H_po": 0.0043,
+          "stay_id": 9
+        },
+        {
+          "auroc_B": 0.4164,
+          "auroc_F": 0.5636,
+          "clipfrac_max": 0.128,
+          "den_po": 0.004,
+          "n_events": 274.0,
+          "n_obs": 9619.0,
+          "sa_H_po": 0.0051,
+          "stay_id": 0
+        },
+        {
+          "auroc_B": 0.609,
+          "auroc_F": 0.6188,
+          "clipfrac_max": 0.2036,
+          "den_po": 0.0033,
+          "n_events": 334.0,
+          "n_obs": 17599.0,
+          "sa_H_po": 0.0025,
+          "stay_id": 1
+        }
+      ],
+      "selected": {
+        "auroc_B": 0.567,
+        "auroc_F": 0.7787,
+        "clipfrac_max": 0.0727,
+        "den_po": 0.1098,
+        "n_events": 6364.0,
+        "n_obs": 34042.0,
+        "sa_H_po": 0.0918
+      },
+      "selected_stay": 3,
+      "selection_metric": "held-out per-obs D_B - D_F (primary); AUROC_F secondary"
+    }
+  }
+}
