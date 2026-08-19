@@ -30,13 +30,7 @@
       "p": 0.6490981801292869
     }
   ],
-  "filters": {
-    "baseline_return": "|m(90 s) - 1| <= 0.25, both stays",
-    "max_ci_width": 0.6,
-    "min_stay_events": 500
-  },
-  "metric": "Pearson r between log history curves, 1-90 s grid",
-  "roc_summary": {
+  "figure4_plotted_roc": {
     "auroc": 0.8815741807554128,
     "auroc_cross_admission": 0.7033461365445172,
     "ci95": [
@@ -52,6 +46,40 @@
     "negative": "first halves of two different participants",
     "positive": "two alternating-clock-hour halves of one recording"
   },
+  "filters": {
+    "baseline_return": "|m(90 s) - 1| <= 0.25, both stays",
+    "max_ci_width": 0.6,
+    "min_stay_events": 500
+  },
+  "manuscript_short_kernel_separation": {
+    "between_patient_residual_r": {
+      "iqr": [
+        -0.856,
+        0.863
+      ],
+      "median": 0.087,
+      "n_pairs": 12882
+    },
+    "caveat": "residual curves are smooth/low-rank -> between-patient r polarizes toward +/-1; AUC is the robust summary",
+    "chance": 0.009,
+    "identification_1nn_accuracy": 0.289,
+    "raw_curve_shape_similarity_between_patients": {
+      "median_r": 0.974,
+      "note": "un-residualized: patients share the stereotyped suppression-rebound shape"
+    },
+    "separation": {
+      "cliff_delta": 0.773,
+      "common_language_auc": 0.886
+    },
+    "within_patient_residual_r": {
+      "iqr": [
+        0.915,
+        0.987
+      ],
+      "median": 0.965
+    }
+  },
+  "metric": "Pearson r between log history curves, 1-90 s grid",
   "selected": [
     {
       "fraction_not_significantly_different": 0.8715083798882681,

@@ -13,10 +13,12 @@ One row per participant (`n = 114`).
 | `participant_id` | Arbitrary public identifier |
 | `n_onset_events` | Merged IED onset events used by the fine-resolution history model |
 | `n_ied_positive_seconds` | One-second bins containing one or more detector-positive samples; this is the response unit used by the 1-second PP-GLM |
-| `modeled_hours_after_first_onset` | Analyzable hours after the first onset within each gap-aware segment |
+| `fine_kernel_post_first_onset_hours` | Fine-kernel analyzable hours after the first onset within each gap-aware segment |
+| `ppglm_valid_eeg_hours` | Valid observed seconds entering the primary 10-second PP-GLM, divided by 3,600 |
 | `n_stays_fit` | Number of qualifying recording stays used for history fitting |
 | `asm_estimable` | Whether model-estimated ASM exposure was estimable |
-| `modeled_onset_rate_per_hour` | Merged onset count divided by post-first-onset modeled hours |
+| `ied_positive_seconds_per_valid_eeg_hour` | IED-positive seconds divided by PP-GLM valid EEG hours; the Table 1 rate |
+| `merged_onset_responses_per_hour` | Merged onset count divided by fine-kernel post-first-onset hours |
 | `apparent_refractory_interval_s` | Initial interval whose upper 95% curve bound remains below baseline |
 | `peak_lag_s` | Lag of maximum fitted multiplier in the significant excitatory interval |
 | `peak_multiplier` | Maximum fitted rate multiplier in that interval |
@@ -30,7 +32,7 @@ The manuscript Table 1 labels the 4,162 median and 3,303,076 total as IEDs/spike
 
 ### `data/deidentified/history/history_curves.csv.gz`
 
-One row per participant and 0.5-second evaluation lag from 1–90 seconds (`114 × 179` rows).
+One row per participant and 0.5-second evaluation lag from 1–90 seconds (`114 × 179` rows). These are the extended curves used by Figures 1, 3, and 4.
 
 | Field | Meaning |
 |:--|:--|
@@ -38,6 +40,10 @@ One row per participant and 0.5-second evaluation lag from 1–90 seconds (`114 
 | `lower_95`, `upper_95` | Pointwise delta-method 95% confidence interval |
 | `split_a_multiplier`, `split_b_multiplier` | Independently estimated alternating-clock-hour half curves |
 | `figure3_example` | Display order for Figure 3; blank for non-exemplars |
+
+### `manuscript_short_history_curves.csv.gz`
+
+One row per participant and evaluation point across 1–15 seconds (`114 × 57` rows). These ratified short-kernel curves reproduce the manuscript and Supplementary Figure S2 split-half median, the 12,882 directed between-participant correlations, and separation AUC of 0.886. They are intentionally distinct from the extended, leave-participants-out Figure 4 ROC construction.
 
 ### `inter_event_interval_histograms.csv.gz`
 
@@ -50,7 +56,7 @@ History curves for 39 participants with two qualifying recordings. Recordings ar
 ### Figure 3 and Figure 4 files
 
 - `figure3_examples.json` contains public labels and history-curve summary features; age and sex are intentionally omitted.
-- `figure4_summary.json` contains the four displayed participants, morphology agreement metrics, ROC summaries, and aggregate age-band results.
+- `figure4_summary.json` contains the four displayed participants, morphology agreement metrics, the exact Figure 4 ROC summary, the separate manuscript short-kernel separation summary, and aggregate age-band results.
 - `figure4_roc_curves.csv` contains the two ROC traces shown in Figure 4.
 
 ## PP-GLM outputs
@@ -93,4 +99,4 @@ The displayed admission context on a relative-hour axis: smoothed IED density, s
 
 ## Supplement source tables
 
-Files under `supplement/source/tables/` are aggregate matrices and summaries used for Supplementary Figures S2–S4. Response and reproducibility labels have been normalized to the manuscript-authoritative terms “post-first-onset hours” and “split-half residual correlation.”
+Files under `supplement/source/tables/` are the aggregate fine-kernel summary and correlation matrices used by the appendix and Supplementary Figure S3. Response and reproducibility labels use the manuscript-authoritative terms “post-first-onset hours” and “split-half residual correlation.” The participant-level short curves needed for Supplementary Figure S2 are provided separately without demographic fields; Supplementary Figure S4 is supplied as a frozen aggregate render.

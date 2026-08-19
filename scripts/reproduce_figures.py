@@ -164,7 +164,7 @@ def figure3() -> Path:
         axis.text(
             0.98,
             0.94,
-            f"rate {metric['modeled_onset_rate_per_min']:.2f}/min\n"
+            f"rate {metric['merged_onset_responses_per_min']:.2f}/min\n"
             f"peak {metric['peak_multiplier']:.2f}×",
             transform=axis.transAxes,
             ha="right",

@@ -10,7 +10,8 @@ The release was assembled from the frozen `onset_pen1_ge500_ae114` result cohort
 4. Participant-level demographics and site were withheld; aggregate supplement summaries were retained.
 5. PP-GLM result tables were copied after identifier remapping and removal of execution-time fields.
 6. Supplement table headers were normalized to manuscript-authoritative response and reproducibility terminology.
-7. Every frozen image, appendix, and source artifact was hashed at copy time.
+7. Ratified 1–15-second kernels underlying the manuscript/SI separation statistics were exported separately from the extended 1–90-second curves used by Figures 1, 3, and 4.
+8. Every frozen image, appendix, and source artifact was hashed at copy time.
 
 `provenance/source_artifact_hashes.json` records the source and release SHA-256 digest for each copied publication artifact without exposing private source paths. `provenance/release_manifest.json` records the complete public tree.
 
@@ -22,3 +23,5 @@ Two related response definitions appear in the analysis:
 - Eligibility and fine-resolution history kernels use **merged onset events**. Their public cohort total is 1,094,298 and median is 3,399.
 
 Public field names preserve that distinction explicitly.
+
+The public cohort table also preserves two exposure denominators: PP-GLM valid EEG hours and fine-kernel post-first-onset hours. [RESULTS_CHECKLIST.md](RESULTS_CHECKLIST.md) records which denominator supports each reported statistic.

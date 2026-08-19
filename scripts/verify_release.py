@@ -126,6 +126,28 @@ def extract_text(path: Path) -> str:
 
 def scientific_checks(audit: Audit) -> None:
     cohort = pd.read_csv(DATA / "cohort_features.csv")
+    expected_cohort_columns = {
+        "participant_id",
+        "n_onset_events",
+        "n_ied_positive_seconds",
+        "fine_kernel_post_first_onset_hours",
+        "ppglm_valid_eeg_hours",
+        "ied_positive_seconds_per_valid_eeg_hour",
+        "merged_onset_responses_per_hour",
+    }
+    legacy_cohort_columns = {
+        "modeled_hours_after_first_onset",
+        "modeled_onset_rate_per_hour",
+        "mean_rate_per_h",
+    }
+    audit.check(
+        expected_cohort_columns <= set(cohort.columns),
+        "cohort_features is missing an explicitly defined response or exposure field",
+    )
+    audit.check(
+        legacy_cohort_columns.isdisjoint(cohort.columns),
+        "cohort_features contains an ambiguous legacy response or exposure field",
+    )
     audit.check(len(cohort) == 114, "cohort_features must contain 114 participants")
     audit.check(
         cohort["participant_id"].nunique() == 114,
@@ -168,9 +190,31 @@ def scientific_checks(audit: Audit) -> None:
         history.groupby("participant_id")["lag_s"].nunique().eq(179).all(),
         "every participant must have the complete 1–90 s history grid",
     )
+    short_history = pd.read_csv(
+        DATA / "history/manuscript_short_history_curves.csv.gz"
+    )
+    audit.check(
+        short_history.shape[0] == 114 * 57,
+        "manuscript short-history grid must be 114 × 57",
+    )
+    audit.check(
+        short_history.groupby("participant_id")["lag_s"].nunique().eq(57).all(),
+        "every participant must have the complete ratified 1–15 s history grid",
+    )
     audit.check(
         ((history["full_multiplier"] >= history["lower_95"]) & (history["full_multiplier"] <= history["upper_95"])).all(),
         "history point estimates must lie inside their 95% intervals",
+    )
+    examples = json.loads((DATA / "history/figure3_examples.json").read_text())
+    audit.check(
+        all(
+            "fine_kernel_post_first_onset_hours" in item
+            and "merged_onset_responses_per_min" in item
+            and "modeled_hours" not in item
+            and "modeled_onset_rate_per_min" not in item
+            for item in examples
+        ),
+        "Figure 3 example summaries contain an ambiguous response or exposure field",
     )
     repeat_curves = pd.read_csv(DATA / "history/repeat_recording_curves.csv.gz")
     audit.check(
@@ -226,7 +270,7 @@ def scientific_checks(audit: Audit) -> None:
     auc = roc.groupby("comparison")["auc"].first().to_dict()
     audit.check(
         close(auc["same_recording_split_halves"], 0.8815741807554128),
-        "split-half ROC AUC changed",
+        "Figure 4 leave-two-participants-out split-half ROC AUC changed",
     )
     audit.check(
         close(auc["same_participant_repeat_recording"], 0.7033461365445172),
@@ -249,6 +293,59 @@ def scientific_checks(audit: Audit) -> None:
         "sleep-state sample sizes or geometric-mean ratios changed",
     )
 
+    expected_penalties = {100, 1000, 10000}
+    penalty_files = sorted((DATA / "ppglm").glob("cross_validated_models_lambda*.csv"))
+    observed_penalties = set()
+    for path in penalty_files:
+        frame = pd.read_csv(path, usecols=["lam"])
+        values = {int(value) for value in frame["lam"].unique()}
+        suffix = int(path.stem.rsplit("lambda", 1)[1])
+        audit.check(values == {suffix}, f"penalty value does not match {path.name}")
+        observed_penalties.update(values)
+    audit.check(
+        observed_penalties == expected_penalties and len(penalty_files) == 3,
+        "public cross-validation files must cover lambda 100, 1000, and 10000",
+    )
+
+    kernel_summary = pd.read_csv(
+        ROOT / "supplement/source/tables/table_sa_kernel_feature_summary.csv",
+        dtype=str,
+        keep_default_na=False,
+    )
+    expected_kernel_summary = {
+        "Modeled merged-onset responses": ("114", "3,399", "1,257–7,746", "504–103,544", "count"),
+        "Modeled post-first-onset exposure": ("114", "80.6", "58.4–114.2", "16.4–302.3", "hours"),
+        "Modeled onset-response rate (post-first-onset hours)": ("114", "45.1", "17.6–136.6", "4.2–406.5", "responses/hour"),
+        "Apparent early boundary": ("114", "3.00", "3.00–3.25", "2.75–8.00", "seconds"),
+        "Rebound peak lag": ("114", "5.00", "3.50–6.50", "3.50–12.00", "seconds"),
+        "Rebound peak multiplier": ("114", "1.466", "1.370–1.606", "1.231–2.509", "rate multiplier"),
+        "40–70 s mean multiplier": ("114", "1.733", "1.336–2.408", "0.920–27.017", "rate multiplier"),
+        "Split-half residual correlation": ("114", "0.965", "0.915–0.987", "-0.144–1.000", "Pearson r"),
+        "Cross-admission residual correlation": ("39", "0.905", "0.636–0.987", "-0.958–0.999", "Pearson r"),
+    }
+    observed_kernel_summary = {
+        row["Characteristic"]: (
+            row["n"],
+            row["Median"],
+            row["IQR"],
+            row["Range"],
+            row["Unit"],
+        )
+        for row in kernel_summary.to_dict(orient="records")
+    }
+    audit.check(
+        observed_kernel_summary == expected_kernel_summary,
+        "Supplementary Table S6 source values or response labels changed",
+    )
+
+    from reproduce_statistics import claims as paper_claims
+
+    for claim in paper_claims():
+        audit.check(
+            claim.matches,
+            f"paper/SI mismatch for {claim.statistic}: {claim.reproduced} != {claim.reported}",
+        )
+
 
 def structural_checks(audit: Audit, verify_manifest: bool = True) -> None:
     required = [
@@ -256,7 +353,10 @@ def structural_checks(audit: Audit, verify_manifest: bool = True) -> None:
         ROOT / "DATA_DICTIONARY.md",
         ROOT / "PRIVACY.md",
         ROOT / "REPRODUCIBILITY.md",
+        ROOT / "RESULTS_CHECKLIST.md",
         ROOT / "CITATION.cff",
+        ROOT / "scripts/reproduce_statistics.py",
+        DATA / "history/manuscript_short_history_curves.csv.gz",
         ROOT / "supplement/supplementary_appendix.pdf",
     ]
     required += sorted((ROOT / "figures/manuscript").glob("figure*.png"))
@@ -299,6 +399,10 @@ def structural_checks(audit: Audit, verify_manifest: bool = True) -> None:
     audit.check(
         not (ROOT / "supplement/source/tables/table_sd_pnas_display_map.csv").exists(),
         "internal supplement display-map table must not be published",
+    )
+    audit.check(
+        not any((ROOT / "supplement/source/tables").glob("table_sc*.csv")),
+        "unused n=113 PP-GLM component tables must not be published",
     )
     manifest_path = ROOT / "provenance/release_manifest.json"
     if verify_manifest and manifest_path.exists():

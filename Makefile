@@ -1,9 +1,12 @@
 PYTHON ?= python3
 
-.PHONY: verify figures supplement-figure supplement-pdf all
+.PHONY: verify statistics figures supplement-figure supplement-pdf all
 
 verify:
 	$(PYTHON) scripts/verify_release.py
+
+statistics:
+	$(PYTHON) scripts/reproduce_statistics.py
 
 figures:
 	$(PYTHON) scripts/reproduce_figures.py
@@ -15,4 +18,4 @@ supplement-pdf:
 	mkdir -p supplement/source/build
 	cd supplement/source && latexmk -xelatex -interaction=nonstopmode -halt-on-error -output-directory=build supplementary_appendix.tex
 
-all: verify figures supplement-figure
+all: verify statistics figures supplement-figure

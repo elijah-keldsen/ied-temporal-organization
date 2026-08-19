@@ -17,12 +17,15 @@ python -m pip install -r requirements.txt
 
 ```bash
 make verify
+make statistics
 ```
+
+`make statistics` recomputes 24 manuscript/appendix claim groups and prints the reported and reproduced values side by side. See [RESULTS_CHECKLIST.md](RESULTS_CHECKLIST.md) for the claim-to-file crosswalk and the distinction between the 1–15-second manuscript separation AUC and the 1–90-second Figure 4 ROC.
 
 The verifier checks:
 
 1. cohort sizes, response totals, response-unit semantics, and history-curve grids;
-2. manuscript-defining PP-GLM fractions, detectability classes, ASM sign split, ROC AUCs, and sleep ratios;
+2. manuscript-defining PP-GLM fractions, confidence intervals, contrasts, detectability classes, ASM sign split, both reproducibility AUC estimands, dependency distances, and sleep ratios;
 3. required figures, appendix files, SHA-256 provenance, and stale terminology;
 4. prohibited columns, identifier-shaped tokens, dates, filesystem paths, cloud locations, and credential patterns.
 

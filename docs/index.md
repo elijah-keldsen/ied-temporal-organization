@@ -20,6 +20,6 @@ Recent interictal epileptiform discharge history was the dominant determinant of
 |:--:|:--:|
 | ![Sleep density](assets/figure6_sleep_density.png) | ![Kernel correlations](assets/figure_s3_kernel_correlations.png) |
 
-The repository includes analysis-ready pseudonymous derivatives, the final supplementary appendix, deterministic figure scripts, a detailed data dictionary, and a release gate that checks both scientific claims and privacy invariants.
+The repository includes analysis-ready pseudonymous derivatives, the final supplementary appendix, deterministic figure scripts, a detailed data dictionary, and a release gate that checks both scientific claims and privacy invariants. A manuscript-to-data checklist distinguishes the ratified short-kernel separation analysis from the related Figure 4 ROC display.
 
 [Explore the public data](data.md) · [Read the privacy design](privacy.md) · [Open the supplementary appendix](assets/supplementary_appendix.pdf)

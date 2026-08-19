@@ -46,10 +46,11 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 make verify
+make statistics
 make figures
 ```
 
-`make verify` checks cohort membership, manuscript-defining statistics, figure inputs, artifact hashes, prohibited columns, identifier-shaped strings, dates, local paths, and credential patterns. `make figures` writes public-safe reproductions to `figures/reproduced/`.
+`make verify` checks cohort membership, manuscript-defining statistics, figure inputs, artifact hashes, prohibited columns, identifier-shaped strings, dates, local paths, and credential patterns. `make statistics` prints a paper-to-public-data comparison table and fails on any mismatch. `make figures` writes public-safe reproductions to `figures/reproduced/`.
 
 ## Repository map
 
@@ -63,7 +64,7 @@ docs/                    GitHub Pages landing page
 provenance/              Artifact and release SHA-256 manifests
 ```
 
-The [data dictionary](DATA_DICTIONARY.md) documents every public table. [Reproducibility](REPRODUCIBILITY.md) explains which outputs can be rebuilt from this release, while [privacy](PRIVACY.md) records the release boundary and the checks used to enforce it.
+The [results checklist](RESULTS_CHECKLIST.md) maps manuscript and appendix claims to their public inputs, including the distinct reproducibility AUC estimands. The [data dictionary](DATA_DICTIONARY.md) documents every public table. [Reproducibility](REPRODUCIBILITY.md) explains which outputs can be rebuilt from this release, while [privacy](PRIVACY.md) records the release boundary and the checks used to enforce it.
 
 ## Data boundary
 
