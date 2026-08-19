@@ -8,7 +8,7 @@
     {
       "path": ".github/workflows/release-audit.yml",
       "bytes": 350,
-      "sha256": "d3146d3dcb659ac12c0d2a31dae10385de9cbad1c640a67d350246cb2466b01a"
+      "sha256": "d9c785f2279f18832ce843c1d23924bca31dd29a407959b89d174185dee0b7ef"
     },
     {
       "path": ".gitignore",
