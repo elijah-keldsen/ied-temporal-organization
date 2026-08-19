@@ -12,7 +12,7 @@
 
 </div>
 
-This repository accompanies the Brain manuscript by Keldsen and colleagues. It contains the manuscript figures, supplementary appendix, analysis-ready deidentified derivatives, and deterministic checks for the reported results. The release is deliberately small: it preserves the quantities needed to inspect and reproduce the paper without exposing source identifiers, calendar dates, or clinical timelines.
+This repository accompanies the Brain manuscript by Keldsen et al. It contains the manuscript figures, supplementary appendix, analysis-ready deidentified derivatives, and deterministic checks for the reported results. The release is deliberately small: it preserves the quantities needed to inspect and reproduce the paper without exposing source identifiers, calendar dates, or clinical timelines.
 
 <p align="center">
   <img src="figures/manuscript/figure2_dependency_structure.png" width="880" alt="Dependency structure of IED timing across history, vigilance, and antiseizure medication exposure">
