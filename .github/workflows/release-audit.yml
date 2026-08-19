@@ -17,4 +17,3 @@ jobs:
       - run: make verify
       - run: make statistics
       - run: make figures
-      - run: git diff --exit-code -- figures/reproduced

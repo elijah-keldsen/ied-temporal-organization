@@ -7,8 +7,8 @@
     },
     {
       "path": ".github/workflows/release-audit.yml",
-      "bytes": 435,
-      "sha256": "ba8a2d8e1c406f3edcdd8cfcf82a074a02717b4ee1296e981eaab0d74196a71a"
+      "bytes": 379,
+      "sha256": "0e1329e98f80451b093167f85d3a16177b1464735c375bbabb951c8f9a08fc2c"
     },
     {
       "path": ".gitignore",
@@ -307,8 +307,8 @@
     },
     {
       "path": "scripts/reproduce_figures.py",
-      "bytes": 11426,
-      "sha256": "ccaec1ceb2c8ba987b7c6476a0dc09bbef8ca6fbcc443cf202fc09fa8de55bd0"
+      "bytes": 11721,
+      "sha256": "11daeefa000b6582b4d2ed16802108375a4c1f3c36abf57b7000c047f1c2ec69"
     },
     {
       "path": "scripts/reproduce_statistics.py",

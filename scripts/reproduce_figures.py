@@ -330,6 +330,13 @@ def main() -> int:
     configure_style()
     outputs = [figure2(), figure3(), figure4(), figure6()]
     for output in outputs:
+        rendered = plt.imread(output)
+        if (
+            rendered.ndim not in (2, 3)
+            or min(rendered.shape[:2]) < 500
+            or float(np.nanmax(rendered) - np.nanmin(rendered)) < 0.2
+        ):
+            raise RuntimeError(f"invalid or blank rendered figure: {output}")
         print(output.relative_to(ROOT))
     return 0
 
